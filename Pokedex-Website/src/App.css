@@ -10,7 +10,8 @@
 ul{
   display: flex;
   flex-direction: row;
-  max-width: 20%;
+  width: 100%;
+  height: 100%;
 }
 
 li{

@@ -17,7 +17,7 @@ function App() {
     <>
       <ul className="container">
         <li>
-          <div className="">
+          <div className="Element">
             {reproducePokemons(10)}
           </div>
         </li>

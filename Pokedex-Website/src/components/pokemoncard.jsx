@@ -35,6 +35,7 @@ export function PokemonCard(props){
               setSelectedColor('rgb(240,240,240)')
           }
         });
+        
     }, []);
         
     if (isLoading) {
