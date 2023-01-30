@@ -29,3 +29,9 @@
     font-size: 26px;
 
 }
+
+.PokemonCard{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}

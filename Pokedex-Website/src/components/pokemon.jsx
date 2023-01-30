@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./pokemon.css";
 
 export function Pokemon(props) {
-    console.log(props.color)
     return (
         <div className="pokemonCapsule row" style={{backgroundColor: props.color}} >
             <div className="col">

@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Pokemon } from "./pokeComponent/pokemon";
+import { Pokemon } from "./pokemon";
 import { useEffect } from "react";
+import './pokemon.css'
 
 export function PokemonCard(props){
     const [name, setName] = useState("");
@@ -12,9 +13,7 @@ export function PokemonCard(props){
       fire: "rgb(143, 0, 0)",
       plant: "rgb(131,186,54)",
     };
-    
-    var PokemonToShow_Number = "7";
-    
+    const PokemonToShow_Number = props.number;
     useEffect(() => {
       fetch("https://pokeapi.co/api/v2/pokemon/" + PokemonToShow_Number + "/")
         .then((response) => response.json())
@@ -23,21 +22,21 @@ export function PokemonCard(props){
           setImageURL(data.sprites.front_default);
           setIsLoading(false);
           setType(data.types[0].type.name);
-          console.log(type)
           switch(type){
             case 'fire':
-              setSelectedColor('rgb(155,0,0)')
+              setSelectedColor('rgb(128,0,0)')
               break;
             case'grass':
               setSelectedColor('rgb(0,128,0)')
               break;
             case 'water':
               setSelectedColor('rgb(0,0,128)')
+            default:
+              setSelectedColor('rgb(240,240,240)')
           }
         });
     }, []);
-    
-    
+        
     if (isLoading) {
       return (
         <div>
