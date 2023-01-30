@@ -47,7 +47,7 @@ export function PokemonCard(props){
     }
     
     return (
-      <div className="App">
+      <div className="PokemonCard">
         <Pokemon
           name={name}
           image={imageURL}

@@ -1,14 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-// import { Pokemon } from "./pokeComponent/pokemon";
-import { PokemonCard } from "./pokeComponent/pokemon-card";
+// import { Pokemon } from "./pokeComponent/pokemon"
+import {PokemonCard} from "./components/pokemoncard"
 import { useEffect } from "react";
 
 function App() {
-  return(
-  <div>
-    <PokemonCard />
-  </div>)
+  return(<div></div>)
 }
 
 export default App;
