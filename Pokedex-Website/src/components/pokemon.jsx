@@ -22,8 +22,6 @@ export function Pokemon(props) {
             <h3 className="PokemonNumber">{props.number}</h3>
             </div>
         </div>
-
-
       </div>
     );
   }

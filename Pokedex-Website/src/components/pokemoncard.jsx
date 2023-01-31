@@ -32,17 +32,16 @@ export function PokemonCard(props){
       fairy: '#D685AD',
     };
     const fetchData = async() => {
-      const response = await fetch("https://pokeapi.co/api/v2/pokemon/" + PokemonToShow_Number + "/");
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/" + PokemonToShow_Number + "/")
+
       const data = await response.json();
       setName(data.name);
       
     setImageURL(data.sprites.front_default);
-     
 
+      // setType(data.types[0].type.name);
 
-
-      setType(data.types[0].type.name);
-      switch(type){
+      switch(data.types[0].type.name){
         case "normal":
           setSelectedColor(colours.normal);
           break;
@@ -97,10 +96,6 @@ export function PokemonCard(props){
         case "fairy":
           setSelectedColor(colours.fairy);
           break;
-        default:
-          setSelectedColor(colours.normal);
-          break;
-     
             }
       setIsLoading(false);
           }
@@ -110,14 +105,15 @@ export function PokemonCard(props){
         
     if (isLoading) {
       return (
-        <div>
-          <h1>Cargando</h1>
+        <div className="m-2 card">
+          <img className="card-img-top" src="./src/assets/loading.gif" alt="" srcset="" />
+          <h1 className="card-text">Cargando</h1>
         </div>
       );
     }
     
     if(!isLoading){
-      return (<>
+      return (
           <Pokemon
             name={name}
             image={imageURL}
@@ -125,7 +121,6 @@ export function PokemonCard(props){
             type={type}
             color={selectedColor}
           />
-        </>
       );
     }
 
