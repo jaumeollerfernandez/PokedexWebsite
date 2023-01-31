@@ -17,7 +17,7 @@ function App() {
   }
   return (
     <div className="container d-flex flex-wrap align-items-center">
-        {reproducePokemons(3)}
+        {reproducePokemons(151)}
     </div>
   );
 }
