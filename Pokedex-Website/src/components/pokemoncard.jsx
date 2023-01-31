@@ -9,7 +9,7 @@ export function PokemonCard(props){
     var [isLoading, setIsLoading] = useState(true);
     const [type, setType] = useState("");
     const [selectedColor, setSelectedColor] = useState("");
-    const PokemonToShow_Number = props.number;
+    const [PokemonToShow_Number,setPokemonToShow_Number] = useState(props.number);
     const colours = {
       normal: '#A8A77A',
       fire: '#EE8130',
@@ -32,6 +32,7 @@ export function PokemonCard(props){
     };
 
     const fetchData = async() => {
+      
     const response = await fetch("https://pokeapi.co/api/v2/pokemon/" + PokemonToShow_Number + "/")
 
       const data = await response.json();
