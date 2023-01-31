@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Pokemon } from "./pokemon";
 import { useEffect } from "react";
 import './pokemon.css'
-import { string } from "prop-types";
 
 export function PokemonCard(props){
     const [name, setName] = useState("");
@@ -31,6 +30,7 @@ export function PokemonCard(props){
       steel: '#B7B7CE',
       fairy: '#D685AD',
     };
+
     const fetchData = async() => {
     const response = await fetch("https://pokeapi.co/api/v2/pokemon/" + PokemonToShow_Number + "/")
 

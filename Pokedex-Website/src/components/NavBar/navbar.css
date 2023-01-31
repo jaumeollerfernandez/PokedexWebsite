@@ -1,0 +1,49 @@
+.navbar-pokemon{
+    background-color: #d01717;
+    color: aliceblue !important;
+    width: 100%;
+}
+
+.row{
+    padding: 0;
+    --bs-gutter-x: 0;
+}
+
+.navbar-elements{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.PokeTitle{
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SearchBar{
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    padding: 1rem;
+}
+
+.SearchBar input{
+    width: 60%;
+    height: 100%;
+}
+
+.SearchBar p{
+    display: flex;
+    align-content: flex-end;
+}
+
+.btn{
+    display: flex;
+    align-content: flex-start;
+}

@@ -1,23 +1,26 @@
-import { useState } from "react";
 import "./App.css";
-import { Pokemon } from "./components/pokemon";
 import { PokemonCard } from "./components/pokemoncard";
-import { useEffect } from "react";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
+import { ColorSchemesExample } from './components/NavBar/Pokenavbar'
 
 function App() {
   function reproducePokemons(pNumber) {
     var pokemons = [];
     for (let i = 1; i <= pNumber; i++) {
-      pokemons.push(
-            <PokemonCard number={i} />
-      );
+      pokemons.push(<PokemonCard number={i} />);
     }
     return pokemons;
   }
   return (
-    <div className="container d-flex flex-wrap align-items-center">
-        {reproducePokemons(151)}
+    <div>
+      <div className="row">
+        <div className="col">
+          <ColorSchemesExample />
+        </div>
+      </div>
+      <div className="container d-flex flex-wrap align-items-center">
+        {reproducePokemons(10)}
+      </div>
     </div>
   );
 }

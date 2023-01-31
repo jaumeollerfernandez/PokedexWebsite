@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./pokemon.css";
 
 export function Pokemon(props) {
