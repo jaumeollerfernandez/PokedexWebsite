@@ -1,25 +1,24 @@
-.Element{
+body{
+  margin: 5px 0;
+}
+
+.card{
+  border-radius: 10%;
+  border: 1px solid black !important;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
+  /* padding: 1rem; */
+  margin: 1rem;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  transition: all linear 200ms;
 }
-
-ul{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-}
-
-li{
-
-  list-style-type: none;
-  padding: 0 1rem;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-
+.card:hover{
+  transform: scale(1.1);
+  transition: all linear 200ms;
+  z-index: 1;
+  box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+  cursor: pointer;
 }
