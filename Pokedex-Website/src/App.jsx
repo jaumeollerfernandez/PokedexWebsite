@@ -29,6 +29,7 @@ function App() {
     }
 
     if(pNumber.length > 3){
+      
       pokemons.push(<PokemonCard number={pNumber} />);
     }else{
       for (let i = 1; i <= pNumber; i++) {
@@ -50,7 +51,7 @@ function App() {
           <PokeNavBar getNumberData={getNumberData} />
         </div>
       </div>
-      <div className="container d-flex flex-wrap align-items-center">
+      <div id="Pokemoncontainer" className="container d-flex flex-wrap align-items-center">
         {reproducePokemons(PokemonNumber)}
       </div>
     </div>
