@@ -32,18 +32,3 @@
     align-content: flex-end;
     padding: 1rem;
 }
-
-.SearchBar input{
-    width: 60%;
-    height: 100%;
-}
-
-.SearchBar p{
-    display: flex;
-    align-content: flex-end;
-}
-
-.btn{
-    display: flex;
-    align-content: flex-start;
-}

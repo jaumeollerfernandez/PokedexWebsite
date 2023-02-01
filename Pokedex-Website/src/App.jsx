@@ -1,7 +1,7 @@
 import "./App.css";
 import { PokemonCard } from "./components/pokemoncard";
 import "bootstrap/dist/css/bootstrap.css";
-import { ColorSchemesExample } from './components/NavBar/Pokenavbar'
+import { PokeNavBar } from './components/NavBar/Pokenavbar'
 
 function App() {
   function reproducePokemons(pNumber) {
@@ -15,7 +15,7 @@ function App() {
     <div>
       <div className="row">
         <div className="col">
-          <ColorSchemesExample />
+          <PokeNavBar />
         </div>
       </div>
       <div className="container d-flex flex-wrap align-items-center">

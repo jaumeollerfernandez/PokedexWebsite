@@ -1,11 +1,11 @@
 import "./navbar.css";
 
-export function ColorSchemesExample() {
+export function PokeNavBar() {
   return (
     <>
       <nav className="navbar-pokemon">
         <div className="row">
-          <div className="col-2 pokemon-logo">
+          <div className="col-4 pokemon-logo">
             <div className="row">
               <div className="col-6 px-1">
                 <img
@@ -20,22 +20,21 @@ export function ColorSchemesExample() {
               </div>
             </div>
           </div>
-          <div className="col-10 text-center ">
-            <div className="row SearchBar">
-                <div className="col-6">
-                    
+          <div className="col-4 text-center ">
+              <div className="row">
+                <div className="col SearchBar">
+                  <button className="btn btn-dark">Find by name</button>
+                  <input className="input-group-text mx-2" type="text" id="searchPokemonName"/>
                 </div>
-                <div className="col-6">
-                    <div className="row">
-                        <div className="col-8">
-                            <input className="" type="text" />
-                        </div>
-                        <div className="col-2">
-                            <button className="btn">Find</button>
-                        </div>
-                    </div>
+              </div>
+          </div>
+          <div className="col-4 text-center ">
+              <div className="row">
+                <div className="col SearchBar">
+                  <button type="number" className="btn btn-dark" id="searchPokemonNumber">How many?</button>
+                  <input className="mx-2 input-group-text" type="text" />
                 </div>
-            </div>
+              </div>
           </div>
         </div>
       </nav>
@@ -43,4 +42,4 @@ export function ColorSchemesExample() {
   );
 }
 
-export default ColorSchemesExample;
+export default PokeNavBar;
