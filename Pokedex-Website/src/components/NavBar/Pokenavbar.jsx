@@ -1,11 +1,11 @@
 import "./navbar.css";
 
-export function PokeNavBar() {
+export function PokeNavBar(props) {
 
   function returnNumber(){
     let NumberToSend = document.getElementById('searchPokemonNumber').value;
     console.log(NumberToSend)
-    return NumberToSend
+    props.getNumberData(NumberToSend)
   }
 
   return (
