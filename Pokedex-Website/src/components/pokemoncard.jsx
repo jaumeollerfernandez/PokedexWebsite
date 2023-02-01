@@ -40,8 +40,9 @@ export function PokemonCard(props) {
     const response = await fetch(
       "https://pokeapi.co/api/v2/pokemon/" + PokemonToShow_Number + "/"
     );
-
+    
     const data = await response.json();
+    console.log(data)
     setName(data.name);
 
     setImageURL(data.sprites.front_default);
@@ -194,7 +195,7 @@ export function PokemonCard(props) {
       <div className="m-2 card">
         <img
           className="card-img-top"
-          src="./src/assets/loading.gif"
+          srcSet="./src/assets/loading.gif"
           alt=""
           srcset=""
         />

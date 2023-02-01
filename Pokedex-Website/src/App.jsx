@@ -9,8 +9,31 @@ function App() {
 
   function reproducePokemons(pNumber) {
     var pokemons = [];
-    for (let i = 1; i <= pNumber; i++) {
-      pokemons.push(<PokemonCard number={i} />);
+    if (pNumber === 0 || pNumber === "")
+      return (
+        <div className="col-12 text-center">
+          <h1 className="text-center">
+            Please select a number or write a name
+          </h1>
+        </div>
+      );
+    
+    if(pNumber > 898){
+      return(
+        <div className="col-12 text-center">
+          <h1 className="text-center">
+            Please select a number between 1 and 898
+          </h1>
+        </div>
+      )
+    }
+
+    if(pNumber.length > 3){
+      pokemons.push(<PokemonCard number={pNumber} />);
+    }else{
+      for (let i = 1; i <= pNumber; i++) {
+        pokemons.push(<PokemonCard number={i} />);
+      }
     }
     return pokemons;
   }
