@@ -1,11 +1,10 @@
 import "./navbar.css";
 
 export function PokeNavBar(props) {
-
-  function returnNumber(){
-    let NumberToSend = document.getElementById('searchPokemonNumber').value;
-    console.log(NumberToSend)
-    props.getNumberData(NumberToSend)
+  function returnNumber() {
+    let NumberToSend = document.getElementById("searchPokemonNumber").value;
+    console.log(NumberToSend);
+    props.getNumberData(NumberToSend);
   }
 
   return (
@@ -28,23 +27,36 @@ export function PokeNavBar(props) {
             </div>
           </div>
           <div className="col-4 text-center ">
-              <div className="row">
-                <div className="col SearchBar">
-                  <button className="btn btn-dark">Find by name</button>
-                  <input className="input-group-text mx-2" type="text" id="searchPokemonName"/>
-                </div>
+            <div className="row">
+              <div className="col SearchBar">
+                <button className="btn btn-dark">Find by name</button>
+                <input
+                  className="input-group-text mx-2"
+                  type="text"
+                  id="searchPokemonName"
+                />
               </div>
+            </div>
           </div>
           <div className="col-4 text-center ">
-              <div className="row">
-                <div className="col SearchBar">
-                  <button type="number" className="btn btn-dark" 
-                  onClick={()=>{
-                   returnNumber() 
-                  }}>How many?</button>
-                  <input className="mx-2 input-group-text" type="text" id="searchPokemonNumber"/>
-                </div>
+            <div className="row">
+              <div className="col SearchBar">
+                <button
+                  type="number"
+                  className="btn btn-dark"
+                  onClick={() => {
+                    returnNumber();
+                  }}
+                >
+                  How many?
+                </button>
+                <input
+                  className="mx-2 input-group-text"
+                  type="text"
+                  id="searchPokemonNumber"
+                />
               </div>
+            </div>
           </div>
         </div>
       </nav>

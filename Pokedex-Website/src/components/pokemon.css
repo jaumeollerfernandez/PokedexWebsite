@@ -1,6 +1,6 @@
-.PokemonImage{
-    min-width: 170px;
-    min-height: 170px;
+.PokemonImage {
+  min-width: 170px;
+  min-height: 170px;
 }
 
 /* .pokemonCapsule{
@@ -8,39 +8,37 @@
     border-radius: 20%;
 } */
 
-.card-body{
-    background-color: rgb(207, 207, 207);
-    width: 100%;
-    height: auto;
+.card-body {
+  background-color: rgb(207, 207, 207);
+  width: 100%;
+  height: auto;
 }
 
-.PokemonName{
-    background-color: rgb(207, 207, 207);
-    color: black;
-    border-radius: 5%;
-    font-family: 'VT323', monospace;
-    font-size: 26px;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-
+.PokemonName {
+  background-color: rgb(207, 207, 207);
+  color: black;
+  border-radius: 5%;
+  font-family: "VT323", monospace;
+  font-size: 26px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .PokemonName::first-letter {
-    text-transform:capitalize;
+  text-transform: capitalize;
 }
 
-.PokemonNumber{
-    margin: 0;
-    padding-bottom: 1rem;
-    font-size: 26px;
-
+.PokemonNumber {
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 26px;
 }
 
-.PokemonCard{
-    display: flex;
-    max-width: 10rem;
-    max-height: 10rem;
-    flex-direction: row;
-    text-align: center;
+.PokemonCard {
+  display: flex;
+  max-width: 10rem;
+  max-height: 10rem;
+  flex-direction: row;
+  text-align: center;
 }

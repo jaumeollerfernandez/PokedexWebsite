@@ -1,34 +1,34 @@
-.navbar-pokemon{
-    background-color: #d01717;
-    color: aliceblue !important;
-    width: 100%;
+.navbar-pokemon {
+  background-color: #d01717;
+  color: aliceblue !important;
+  width: 100%;
 }
 
-.row{
-    padding: 0;
-    --bs-gutter-x: 0;
+.row {
+  padding: 0;
+  --bs-gutter-x: 0;
 }
 
-.navbar-elements{
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.navbar-elements {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.PokeTitle{
-    display: flex;
-    justify-content: center;
+.PokeTitle {
+  display: flex;
+  justify-content: center;
 }
 
-.pokemon-logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.pokemon-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.SearchBar{
-    display: flex;
-    justify-content: center;
-    align-content: flex-end;
-    padding: 1rem;
+.SearchBar {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  padding: 1rem;
 }
