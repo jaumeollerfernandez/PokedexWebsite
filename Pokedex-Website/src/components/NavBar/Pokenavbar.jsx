@@ -1,6 +1,13 @@
 import "./navbar.css";
 
 export function PokeNavBar() {
+
+  function returnNumber(){
+    let NumberToSend = document.getElementById('searchPokemonNumber').value;
+    console.log(NumberToSend)
+    return NumberToSend
+  }
+
   return (
     <>
       <nav className="navbar-pokemon">
@@ -31,8 +38,11 @@ export function PokeNavBar() {
           <div className="col-4 text-center ">
               <div className="row">
                 <div className="col SearchBar">
-                  <button type="number" className="btn btn-dark" id="searchPokemonNumber">How many?</button>
-                  <input className="mx-2 input-group-text" type="text" />
+                  <button type="number" className="btn btn-dark" 
+                  onClick={()=>{
+                   returnNumber() 
+                  }}>How many?</button>
+                  <input className="mx-2 input-group-text" type="text" id="searchPokemonNumber"/>
                 </div>
               </div>
           </div>
