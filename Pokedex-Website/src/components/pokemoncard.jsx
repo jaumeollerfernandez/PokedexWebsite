@@ -9,6 +9,9 @@ export function PokemonCard(props) {
   var [isLoading, setIsLoading] = useState(true);
   const [type, setType] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
+  const [BadgeType, setBadgeType] = useState("");
+  const [BadgeType2, setBadgeType2] = useState("");
+  const [LengthType, setLengthType] = useState(1);
   const [PokemonToShow_Number, setPokemonToShow_Number] = useState(
     props.number
   );
@@ -48,60 +51,139 @@ export function PokemonCard(props) {
     switch (data.types[0].type.name) {
       case "normal":
         setSelectedColor(colours.normal);
+        setBadgeType("./src/assets/badges/normal.png");
         break;
       case "fire":
         setSelectedColor(colours.fire);
+        setBadgeType("./src/assets/badges/fire.png");
         break;
       case "water":
         setSelectedColor(colours.water);
+        setBadgeType("./src/assets/badges/water.png");
         break;
       case "electric":
         setSelectedColor(colours.electric);
+        setBadgeType("./src/assets/badges/electric.png");
         break;
       case "grass":
         setSelectedColor(colours.grass);
+        setBadgeType("./src/assets/badges/grass.png");
         break;
       case "ice":
         setSelectedColor(colours.ice);
+        setBadgeType("./src/assets/badges/ice.png");
         break;
       case "fighting":
         setSelectedColor(colours.fighting);
+        setBadgeType("./src/assets/badges/fighting.png");
         break;
       case "poison":
         setSelectedColor(colours.poison);
+        setBadgeType("./src/assets/badges/poison.png");
         break;
       case "ground":
         setSelectedColor(colours.ground);
+        setBadgeType("./src/assets/badges/ground.png");
         break;
       case "flying":
         setSelectedColor(colours.flying);
+        setBadgeType("./src/assets/badges/flying.png");
         break;
       case "psychic":
         setSelectedColor(colours.psychic);
+        setBadgeType("./src/assets/badges/psychic.png");
         break;
       case "bug":
         setSelectedColor(colours.bug);
+        setBadgeType("./src/assets/badges/bug.png");
         break;
       case "rock":
         setSelectedColor(colours.rock);
+        setBadgeType("./src/assets/badges/rock.png");
         break;
       case "ghost":
         setSelectedColor(colours.ghost);
+        setBadgeType("./src/assets/badges/ghost.png");
         break;
       case "dragon":
         setSelectedColor(colours.dragon);
+        setBadgeType("./src/assets/badges/dragon.png");
         break;
       case "dark":
         setSelectedColor(colours.dark);
+        setBadgeType("./src/assets/badges/dark.png");
         break;
       case "steel":
         setSelectedColor(colours.steel);
+        setBadgeType("./src/assets/badges/steel.png");
         break;
       case "fairy":
         setSelectedColor(colours.fairy);
+        setBadgeType("./src/assets/badges/fairy.png");
         break;
     }
+
+    if (data.types.length > 1) {
+      switch (data.types[1].type.name) {
+        case "normal":
+          setBadgeType2("./src/assets/badges/normal.png");
+          break;
+        case "fire":
+          setBadgeType2("./src/assets/badges/fire.png");
+          break;
+        case "water":
+          setBadgeType2("./src/assets/badges/water.png");
+          break;
+        case "electric":
+          setBadgeType2("./src/assets/badges/electric.png");
+          break;
+        case "grass":
+          setBadgeType2("./src/assets/badges/grass.png");
+          break;
+        case "ice":
+          setBadgeType2("./src/assets/badges/ice.png");
+          break;
+        case "fighting":
+          setBadgeType2("./src/assets/badges/fighting.png");
+          break;
+        case "poison":
+          setBadgeType2("./src/assets/badges/poison.png");
+          break;
+        case "ground":
+          setBadgeType2("./src/assets/badges/ground.png");
+          break;
+        case "flying":
+          setBadgeType2("./src/assets/badges/flying.png");
+          break;
+        case "psychic":
+          setBadgeType2("./src/assets/badges/psychic.png");
+          break;
+        case "bug":
+          setBadgeType2("./src/assets/badges/bug.png");
+          break;
+        case "rock":
+          setBadgeType2("./src/assets/badges/rock.png");
+          break;
+        case "ghost":
+          setBadgeType2("./src/assets/badges/ghost.png");
+          break;
+        case "dragon":
+          setBadgeType2("./src/assets/badges/dragon.png");
+          break;
+        case "dark":
+          setBadgeType2("./src/assets/badges/dark.png");
+          break;
+        case "steel":
+          setBadgeType2("./src/assets/badges/steel.png");
+          break;
+        case "fairy":
+          setBadgeType2("./src/assets/badges/fairy.png");
+          break;
+      }
+    }
+
     setIsLoading(false);
+    setLengthType(data.types.length);
   };
   useEffect(() => {
     fetchData();
@@ -129,6 +211,9 @@ export function PokemonCard(props) {
         number={PokemonToShow_Number}
         type={type}
         color={selectedColor}
+        BadgeType={BadgeType}
+        BadgeType2={BadgeType2}
+        lengthType={LengthType}
       />
     );
   }

@@ -25,8 +25,11 @@ export function Pokemon(props) {
 
       <div className="card-text">
         <div className="col text-center">
-            <img className="py-2 px-1" src="" onError={BrokenBadge} width={70} alt="" srcset="" />
-            <img className="py-2 px-1" src="" onError={BrokenBadge} width={70} alt="" srcset="" />
+            <img className="py-2 px-1" src={props.BadgeType} onError={BrokenBadge} width={70} alt="" srcset="" />
+            {
+                props.lengthType === 2 ?
+                <img className="py-2 px-1" src={props.BadgeType2} onError={BrokenBadge} width={70} alt="" srcset="" /> : null
+            }
         </div>
       </div>
     </div>
