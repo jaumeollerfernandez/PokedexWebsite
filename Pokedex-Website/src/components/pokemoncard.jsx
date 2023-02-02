@@ -38,9 +38,11 @@ export function PokemonCard(props) {
 
   const fetchData = async () => {
     console.log("realizo fetch");
+
     const response = await fetch(
       "https://pokeapi.co/api/v2/pokemon/" + PokemonToShow_Number + "/"
     );
+
     console.log("fetch terminado");
     console.log(response);
 
@@ -195,7 +197,7 @@ export function PokemonCard(props) {
 
   if (isLoading) {
     return (
-      <div className="m-2 card">
+      <div className="m-2 card bg-dark">
         <img
           className="card-img-top"
           srcSet="./src/assets/loading.gif"

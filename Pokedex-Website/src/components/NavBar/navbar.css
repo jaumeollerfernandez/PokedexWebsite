@@ -2,6 +2,17 @@
   background-color: #d01717;
   color: aliceblue !important;
   width: 100%;
+  border: 1px solid black;
+  box-shadow: inset;
+
+}
+
+
+.navbar-icon{
+  background-color: black;
+  display: flex;
+  border-radius: 100%;
+  width: 30%;
 }
 
 .row {

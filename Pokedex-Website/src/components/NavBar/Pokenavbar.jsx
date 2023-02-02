@@ -26,10 +26,10 @@ export function PokeNavBar(props) {
         <div className="row">
           <div className="col-4 pokemon-logo">
             <div className="row">
-              <div className="col-6 px-1">
-                <img srcSet="./src/assets/navbar-icon.png" width={50} alt="" />
+              <div className="col-2 navbar-icon justify-content-center px-4">
+                <img srcSet="./src/assets/navbar-icon.png" width={60} height={60} alt="" />
               </div>
-              <div className="col-6">
+              <div className="col-8 ">
                 <div className="fs-1 PokeTitle">PokeData</div>
               </div>
             </div>

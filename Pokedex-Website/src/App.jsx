@@ -4,10 +4,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import { PokeNavBar } from "./components/NavBar/Pokenavbar";
 import { useState } from "react";
 import Favicon from "react-favicon";
-import { Pokemon } from "./components/pokemon";
 
 function App() {
-  const [PokemonNumber, setPokemonNumber] = useState(1);
+  const [PokemonNumber, setPokemonNumber] = useState(0);
   const [PokemonName, setPokemonName] = useState("");
 
   function getPokemonName(data) {
@@ -22,7 +21,7 @@ function App() {
       return <h1>Reset the values with the button "reset"</h1>;
     }
 
-    if (PokemonNumber === 0 && PokemonName === "")
+    if (PokemonNumber == 0 && PokemonName == "")
       return (
         <div className="col-12 text-center">
           <h1 className="text-center">
