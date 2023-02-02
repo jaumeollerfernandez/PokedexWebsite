@@ -36,12 +36,12 @@ export function PokeNavBar(props) {
           </div>
           <div className="col-4 text-center ">
             <div className="row">
-              <div className="col-4 SearchBar">
+              <div className="col-2 SearchBar">
                 <button className="btn" onClick={reset}>
                   reset
                 </button>
               </div>
-              <div className="col-8 SearchBar">
+              <div className="col-10 SearchBar">
                 <button
                   type="number"
                   className="btn btn-dark"
@@ -49,7 +49,7 @@ export function PokeNavBar(props) {
                     returnNumber();
                   }}
                 >
-                  Number
+                  All (1-898)
                 </button>
                 <input
                   className="mx-2 input-group-text"

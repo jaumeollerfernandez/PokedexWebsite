@@ -4,28 +4,28 @@ import "bootstrap/dist/css/bootstrap.css";
 import { PokeNavBar } from "./components/NavBar/Pokenavbar";
 import { useState } from "react";
 import Favicon from "react-favicon";
+import { Pokemon } from "./components/pokemon";
 
 function App() {
   const [PokemonNumber, setPokemonNumber] = useState(1);
   const [PokemonName, setPokemonName] = useState("");
 
   function getPokemonName(data) {
+    data = data.toLowerCase();
     setPokemonName(data);
-  }
-
-  function SearchPokemon() {
-    // if(PokemonNumber !== 0 || PokemonNumber !== ""){
-    //   var pokemons = [];
-    //   pokemons.push(<PokemonCard name={PokemonName} />);
-    //   return pokemons;
-    // }
   }
 
   function reproducePokemons() {
     var pokemons = [];
-    console.log("reproducePokemons")
-    console.log(PokemonNumber)
-    console.log(PokemonName)
+    console.log("reproducePokemons");
+    console.log(PokemonNumber);
+    console.log(PokemonName);
+
+    var checkPokemonName = document.getElementById("searchPokemonName");
+
+    if (PokemonNumber != "" && PokemonName != "") {
+      return <h1>Reset the values with the button "reset"</h1>;
+    }
 
     if (PokemonNumber === 0 && PokemonName === "")
       return (
@@ -46,15 +46,14 @@ function App() {
       );
     }
 
-    if(PokemonName != ""){
+    if (PokemonName != "") {
       pokemons.push(<PokemonCard number={PokemonName} />);
-    }else{
-      for (let i = 1; i < PokemonNumber; i++) {
-        if(PokemonNumber > 1){
+    } else {
+      for (let i = 1; i <= PokemonNumber; i++) {
+        if (PokemonNumber > 1) {
           pokemons.push(<PokemonCard number={i} />);
         }
-    }
-    
+      }
     }
     return pokemons;
   }
@@ -75,17 +74,20 @@ function App() {
           />
         </div>
       </div>
-      <div
-        id="PokemoncontainerNumber"
-        className="container d-flex flex-wrap align-items-center"
-      >
-        {reproducePokemons()}
+      <div className="row">
+        <div className="col">
+          <div
+            id="PokemoncontainerNumber"
+            className="container d-flex flex-wrap align-items-center"
+          >
+            {reproducePokemons()}
+          </div>
+        </div>
       </div>
       <div
         id="PokemoncontainerText"
         className="container d-flex flex-wrap align-items-center"
-      >
-      </div>
+      ></div>
     </div>
   );
 }
