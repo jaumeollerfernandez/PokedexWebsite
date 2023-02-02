@@ -197,7 +197,6 @@ export function PokemonCard(props) {
           className="card-img-top"
           srcSet="./src/assets/loading.gif"
           alt=""
-          srcset=""
         />
         <h1 className="card-text">Cargando</h1>
       </div>

@@ -7,6 +7,15 @@ import Favicon from "react-favicon";
 
 function App() {
   const [PokemonNumber, setPokemonNumber] = useState(0);
+  const [PokemonName, setPokemonName] = useState("");
+
+  function getPokemonName(data) {
+    setPokemonName(data);
+  }
+
+  function SearchPokemon() {
+    
+  }
 
   function reproducePokemons(pNumber) {
     var pokemons = [];
@@ -42,17 +51,26 @@ function App() {
 
   return (
     <div>
-      <Favicon href="./src/assets/favicon.ico"></Favicon>
+      {/* <Favicon href="./src/assets/favicon.ico"></Favicon> */}
       <div className="row">
         <div className="col">
-          <PokeNavBar getNumberData={getNumberData} />
+          <PokeNavBar
+            getNumberData={getNumberData}
+            getPokemonName={getPokemonName}
+          />
         </div>
       </div>
       <div
-        id="Pokemoncontainer"
+        id="PokemoncontainerNumber"
         className="container d-flex flex-wrap align-items-center"
       >
         {reproducePokemons(PokemonNumber)}
+      </div>
+      <div
+        id="PokemoncontainerText"
+        className="container d-flex flex-wrap align-items-center"
+      >
+        {SearchPokemon(PokemonName)}
       </div>
     </div>
   );

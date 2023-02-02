@@ -7,6 +7,13 @@ export function PokeNavBar(props) {
     props.getNumberData(NumberToSend);
   }
 
+  function returnName() {
+    let NameToSend = document.getElementById("searchPokemonName").value;
+    console.log(NameToSend);
+    props.getPokemonName(NameToSend);
+  }
+
+
   return (
     <>
       <nav className="navbar-pokemon">
@@ -51,6 +58,9 @@ export function PokeNavBar(props) {
                 <button
                   type="number"
                   className="btn btn-dark"
+                  onClick={() => {
+                    returnName();
+                  }}
                 >
                   Search a Pokemon
                 </button>
