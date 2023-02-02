@@ -3,7 +3,7 @@
 
 This website was origined from a class exercise with learning React. It contains simple info about Pokémon. 
 
-##Next Updates
+## Next Updates
 
 I want to add more types of Search, such as search by type, or adding a modal when you click on a Pokemon.
 
