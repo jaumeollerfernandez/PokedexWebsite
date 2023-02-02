@@ -81,7 +81,7 @@ export function PokemonCard(props) {
         break;
       case "fighting":
         setSelectedColor(colours.fighting);
-        setBadgeType("./src/assets/badges/fighting.png");
+        setBadgeType("./src/assets/badges/fight.png");
         break;
       case "poison":
         setSelectedColor(colours.poison);
@@ -150,7 +150,7 @@ export function PokemonCard(props) {
           setBadgeType2("./src/assets/badges/ice.png");
           break;
         case "fighting":
-          setBadgeType2("./src/assets/badges/fighting.png");
+          setBadgeType2("./src/assets/badges/figh.png");
           break;
         case "poison":
           setBadgeType2("./src/assets/badges/poison.png");
@@ -203,7 +203,6 @@ export function PokemonCard(props) {
           srcSet="./src/assets/loading.gif"
           alt=""
         />
-        <h1 className="card-text">Cargando</h1>
       </div>
     );
   }
