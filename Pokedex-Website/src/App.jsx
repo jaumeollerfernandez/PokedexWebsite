@@ -78,7 +78,7 @@ function App() {
         <div className="col">
           <div
             id="PokemoncontainerNumber"
-            className="container d-flex flex-wrap align-items-center"
+            className="container d-flex flex-wrap align-items-center justify-content-center"
           >
             {reproducePokemons()}
           </div>
