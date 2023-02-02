@@ -34,21 +34,24 @@ export function PokeNavBar(props) {
           </div>
           <div className="col-4 text-center ">
             <div className="row">
-              <div className="col SearchBar">
+              <div className="col-4 SearchBar">
+                  <button className="btn">reset</button>
+              </div>
+              <div className="col-8 SearchBar">
                 <button
                   type="number"
                   className="btn btn-dark"
                   onClick={() => {
                     returnNumber();
                   }}
-                >
-                  Put a number
+                  >
+                  Number
                 </button>
                 <input
                   className="mx-2 input-group-text"
                   type="number"
                   id="searchPokemonNumber"
-                />
+                  />
               </div>
             </div>
           </div>
