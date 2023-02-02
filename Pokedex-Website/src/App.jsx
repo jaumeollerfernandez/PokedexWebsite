@@ -3,12 +3,14 @@ import { PokemonCard } from "./components/pokemoncard";
 import "bootstrap/dist/css/bootstrap.css";
 import { PokeNavBar } from "./components/NavBar/Pokenavbar";
 import { useState } from "react";
+import Favicon from "react-favicon";
 
 function App() {
   const [PokemonNumber, setPokemonNumber] = useState(0);
 
   function reproducePokemons(pNumber) {
     var pokemons = [];
+
     if (pNumber === 0 || pNumber === "")
       return (
         <div className="col-12 text-center">
@@ -17,24 +19,18 @@ function App() {
           </h1>
         </div>
       );
-    
-    if(pNumber > 898){
-      return(
+
+    if (pNumber > 898) {
+      return (
         <div className="col-12 text-center">
           <h1 className="text-center">
             Please select a number between 1 and 898
           </h1>
         </div>
-      )
+      );
     }
-
-    if(pNumber.length > 3){
-      
-      pokemons.push(<PokemonCard number={pNumber} />);
-    }else{
-      for (let i = 1; i <= pNumber; i++) {
-        pokemons.push(<PokemonCard number={i} />);
-      }
+    for (let i = 1; i <= pNumber; i++) {
+      pokemons.push(<PokemonCard number={i} />);
     }
     return pokemons;
   }
@@ -46,12 +42,16 @@ function App() {
 
   return (
     <div>
+      <Favicon href="./src/assets/favicon.ico"></Favicon>
       <div className="row">
         <div className="col">
           <PokeNavBar getNumberData={getNumberData} />
         </div>
       </div>
-      <div id="Pokemoncontainer" className="container d-flex flex-wrap align-items-center">
+      <div
+        id="Pokemoncontainer"
+        className="container d-flex flex-wrap align-items-center"
+      >
         {reproducePokemons(PokemonNumber)}
       </div>
     </div>

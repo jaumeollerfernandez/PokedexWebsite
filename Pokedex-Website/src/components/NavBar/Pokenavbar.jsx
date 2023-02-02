@@ -25,7 +25,7 @@ export function PokeNavBar(props) {
               </div>
             </div>
           </div>
-          <div className="col-8 text-center ">
+          <div className="col-4 text-center ">
             <div className="row">
               <div className="col SearchBar">
                 <button
@@ -35,12 +35,29 @@ export function PokeNavBar(props) {
                     returnNumber();
                   }}
                 >
-                  Search your Pokemon
+                  Put a number
+                </button>
+                <input
+                  className="mx-2 input-group-text"
+                  type="number"
+                  id="searchPokemonNumber"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-4 text-center ">
+            <div className="row">
+              <div className="col SearchBar">
+                <button
+                  type="number"
+                  className="btn btn-dark"
+                >
+                  Search a Pokemon
                 </button>
                 <input
                   className="mx-2 input-group-text"
                   type="text"
-                  id="searchPokemonNumber"
+                  id="searchPokemonName"
                 />
               </div>
             </div>
