@@ -1,6 +1,11 @@
-# Pokédex Website - Show info about your favourite Pokémon
+![Figure 1-1](https://github.com/jaumeollerfernandez/PokedexWebsite/blob/main/Pokedex-Website/src/assets/readme_img.png?raw=true)
+# Pokédex Website - Show info about your favourite Pokémon v1.0
 
 This website was origined from a class exercise with learning React. It contains simple info about Pokémon. 
+
+## Next Updates
+
+I want to add more types of Search, such as search by type, or adding a modal when you click on a Pokemon.
 
 ## Contributing
 
