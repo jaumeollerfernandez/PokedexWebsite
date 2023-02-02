@@ -6,7 +6,7 @@ import { useState } from "react";
 import Favicon from "react-favicon";
 
 function App() {
-  const [PokemonNumber, setPokemonNumber] = useState(0);
+  const [PokemonNumber, setPokemonNumber] = useState(1);
   const [PokemonName, setPokemonName] = useState("");
 
   function getPokemonName(data) {
@@ -21,10 +21,13 @@ function App() {
     // }
   }
 
-  function reproducePokemons(pNumber) {
+  function reproducePokemons() {
     var pokemons = [];
+    console.log("reproducePokemons")
+    console.log(PokemonNumber)
+    console.log(PokemonName)
 
-    if (pNumber === 0 || pNumber === "")
+    if (PokemonNumber === 0 && PokemonName === "")
       return (
         <div className="col-12 text-center">
           <h1 className="text-center">
@@ -33,7 +36,7 @@ function App() {
         </div>
       );
 
-    if (pNumber > 898) {
+    if (PokemonNumber > 898) {
       return (
         <div className="col-12 text-center">
           <h1 className="text-center">
@@ -42,8 +45,16 @@ function App() {
         </div>
       );
     }
-    for (let i = 1; i <= pNumber; i++) {
-      pokemons.push(<PokemonCard number={i} />);
+
+    if(PokemonName != ""){
+      pokemons.push(<PokemonCard number={PokemonName} />);
+    }else{
+      for (let i = 1; i < PokemonNumber; i++) {
+        if(PokemonNumber > 1){
+          pokemons.push(<PokemonCard number={i} />);
+        }
+    }
+    
     }
     return pokemons;
   }
@@ -68,13 +79,12 @@ function App() {
         id="PokemoncontainerNumber"
         className="container d-flex flex-wrap align-items-center"
       >
-        {reproducePokemons(PokemonNumber)}
+        {reproducePokemons()}
       </div>
       <div
         id="PokemoncontainerText"
         className="container d-flex flex-wrap align-items-center"
       >
-        {SearchPokemon(PokemonName)}
       </div>
     </div>
   );

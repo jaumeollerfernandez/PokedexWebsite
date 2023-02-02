@@ -69,7 +69,7 @@ export function PokeNavBar(props) {
                     returnName();
                   }}
                 >
-                  Search a Pokemon
+                  Search by name
                 </button>
                 <input
                   className="mx-2 input-group-text"

@@ -18,7 +18,7 @@ export function Pokemon(props) {
         alt={props.name}
       />
 
-        <h3 className="PokemonNumber">{"#" + props.number}</h3>
+        {/* <h3 className="PokemonNumber">{"#" + props.number}</h3> */}
       <div className="card-body text-center">
         <h2 className="PokemonName">{props.name}</h2>
       </div>
