@@ -14,7 +14,11 @@ function App() {
   }
 
   function SearchPokemon() {
-    
+    // if(PokemonNumber !== 0 || PokemonNumber !== ""){
+    //   var pokemons = [];
+    //   pokemons.push(<PokemonCard name={PokemonName} />);
+    //   return pokemons;
+    // }
   }
 
   function reproducePokemons(pNumber) {

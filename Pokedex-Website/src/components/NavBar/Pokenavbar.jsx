@@ -13,6 +13,12 @@ export function PokeNavBar(props) {
     props.getPokemonName(NameToSend);
   }
 
+  function reset() {
+    document.getElementById("searchPokemonNumber").value = "";
+    document.getElementById("searchPokemonName").value = "";
+    props.getNumberData(0);
+    props.getPokemonName("");
+  }
 
   return (
     <>
@@ -21,11 +27,7 @@ export function PokeNavBar(props) {
           <div className="col-4 pokemon-logo">
             <div className="row">
               <div className="col-6 px-1">
-                <img
-                  srcSet="./src/assets/loading.gif"
-                  width={50}
-                  alt=""
-                />
+                <img srcSet="./src/assets/navbar-icon.png" width={50} alt="" />
               </div>
               <div className="col-6">
                 <div className="fs-1 PokeTitle">PokeData</div>
@@ -35,7 +37,9 @@ export function PokeNavBar(props) {
           <div className="col-4 text-center ">
             <div className="row">
               <div className="col-4 SearchBar">
-                  <button className="btn">reset</button>
+                <button className="btn" onClick={reset}>
+                  reset
+                </button>
               </div>
               <div className="col-8 SearchBar">
                 <button
@@ -44,14 +48,14 @@ export function PokeNavBar(props) {
                   onClick={() => {
                     returnNumber();
                   }}
-                  >
+                >
                   Number
                 </button>
                 <input
                   className="mx-2 input-group-text"
                   type="number"
                   id="searchPokemonNumber"
-                  />
+                />
               </div>
             </div>
           </div>
