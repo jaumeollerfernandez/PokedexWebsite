@@ -5,9 +5,9 @@ export function Pokemon(props) {
     ev.target.src = "./src/assets/default.png";
   };
 
-  const BrokenBadge = (ev) =>{
-    ev.target.src = "./src/assets/badges/notfound.png"
-  }
+  const BrokenBadge = (ev) => {
+    ev.target.src = "./src/assets/badges/notfound.png";
+  };
 
   return (
     <div className="m-2 card" style={{ backgroundColor: props.color }}>
@@ -18,18 +18,31 @@ export function Pokemon(props) {
         alt={props.name}
       />
 
-        {/* <h3 className="PokemonNumber">{"#" + props.number}</h3> */}
+      {/* <h3 className="PokemonNumber">{"#" + props.number}</h3> */}
       <div className="card-body text-center">
         <h2 className="PokemonName">{props.name}</h2>
       </div>
 
       <div className="card-text">
         <div className="col text-center">
-            <img className="py-2 px-1" src={props.BadgeType} onError={BrokenBadge} width={70} alt="" srcset="" />
-            {
-                props.lengthType === 2 ?
-                <img className="py-2 px-1" src={props.BadgeType2} onError={BrokenBadge} width={70} alt="" srcset="" /> : null
-            }
+          <img
+            className="py-2 px-1"
+            src={props.BadgeType}
+            onError={BrokenBadge}
+            width={70}
+            alt=""
+            srcset=""
+          />
+          {props.lengthType === 2 ? (
+            <img
+              className="py-2 px-1"
+              src={props.BadgeType2}
+              onError={BrokenBadge}
+              width={70}
+              alt=""
+              srcset=""
+            />
+          ) : null}
         </div>
       </div>
     </div>

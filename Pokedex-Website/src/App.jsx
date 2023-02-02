@@ -16,25 +16,7 @@ function App() {
   }
 
   function reproducePokemons() {
-
-    //Sé que parece raro, pero te obliga a clicar al reset
-    let tempSearchName = document.getElementById("searchPokemonName");
-    let tempSearchNumber = document.getElementById("searchPokemonNumber");
-    
-    // setPokemonName()
-    // setPokemonNumber()
-
-    // document.getElementById("searchPokemonNumber").value = tempSearchNumber.value;
-    // document.getElementById("searchPokemonName").value = tempSearchName.value;
-
-
-
     var pokemons = [];
-    console.log("reproducePokemons");
-    console.log(PokemonNumber);
-    console.log(PokemonName);
-
-    var checkPokemonName = document.getElementById("searchPokemonName");
 
     if (PokemonNumber != "" && PokemonName != "") {
       return <h1>Reset the values with the button "reset"</h1>;
@@ -63,7 +45,7 @@ function App() {
       pokemons.push(<PokemonCard number={PokemonName} />);
     } else {
       for (let i = 1; i <= PokemonNumber; i++) {
-        if (PokemonNumber > 1) {
+        if (PokemonNumber >= 1) {
           pokemons.push(<PokemonCard number={i} />);
         }
       }
