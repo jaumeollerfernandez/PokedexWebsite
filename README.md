@@ -1,3 +1,4 @@
+![Figure 1-1](https://github.com/jaumeollerfernandez/PokedexWebsite/blob/main/Pokedex-Website/src/assets/readme_img.png?raw=true)
 # Pokédex Website - Show info about your favourite Pokémon
 
 This website was origined from a class exercise with learning React. It contains simple info about Pokémon. 
