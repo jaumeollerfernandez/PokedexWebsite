@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PokeModal from "./modal/pokemodal";
 import "./pokemon.css";
+import { motion } from "framer-motion";
 
 export function Pokemon(props) {
   const BrokenImage = (ev) => {
@@ -11,20 +12,18 @@ export function Pokemon(props) {
     ev.target.src = "./src/assets/badges/notfound.png";
   };
 
-  const [showModal, setShowModal] = useState(false);
+  const [modalOpen, setmodalOpen] = useState(false);
+  const close = () => setmodalOpen(false);
+  const open = () => setmodalOpen(true);
+  console.log(modalOpen);
 
   return (
     <>
-      {showModal ? (
-        <PokeModal
-          onClose={() => {
-            setShowModal(false);
-          }}
-        />
-      ):console.log('error')}
-      <div
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.9 }}
         className="m-2 card"
-        onClick={()=>{setShowModal(true)}}
+        // onClick={modalOpen ? close : open}
         style={{ backgroundColor: props.color }}
       >
         <img
@@ -59,7 +58,8 @@ export function Pokemon(props) {
             ) : null}
           </div>
         </div>
-      </div>
+      </motion.div>
+      {/* {modalOpen && <PokeModal handleClose={close} />} */}
     </>
   );
 }

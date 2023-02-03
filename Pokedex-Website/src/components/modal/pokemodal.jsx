@@ -1,29 +1,46 @@
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import './pokemodal.css'
+import "./pokemodal.css";
+import { motion } from "framer-motion";
+import { BackDrop } from "./backdrop";
+import { useState } from "react";
 
 function PokeModal(props) {
-
+  const [text, setText] = useState('')
+  const dropIn = {
+    hidden: {
+      y: "-100vh",
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration:0.1,
+        type: 'spring',
+        damping: 25,
+        stiffness: 500,
+      }
+    },
+    exit: {
+      y: "100vh",
+      opacity: 0,
+    },
+  };
   return (
-    <div
-      className="modal show"
-      style={{ display: 'block', position: 'initial' }}
-    >
-      <Modal.Dialog>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-
-        <Modal.Body>
-          <p>Modal body text goes here.</p>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button onClick={props.onClose} variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
-        </Modal.Footer>
-      </Modal.Dialog>
-    </div>
+    <BackDrop onClick={props.handleClose}>
+      <motion.div
+        className="modal"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+        variants={dropIn}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <p>{text}</p>
+        <button onClick={handleClose}></button>
+      </motion.div>
+    </BackDrop>
   );
 }
 
