@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./pokemon.css";
 import { motion } from "framer-motion";
+import { PokeModal } from "./modal/pokemodal";
 
 export function Pokemon(props) {
   const BrokenImage = (ev) => {
@@ -18,7 +19,9 @@ export function Pokemon(props) {
 
   return (
     <>
+      {modalOpen && <PokeModal handleClose={close}/>}
       <motion.div
+        onClick={open}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.9 }}
         className="m-2 card"
