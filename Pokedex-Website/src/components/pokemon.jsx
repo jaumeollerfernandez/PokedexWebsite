@@ -1,5 +1,4 @@
 import { useState } from "react";
-import PokeModal from "./modal/pokemodal";
 import "./pokemon.css";
 import { motion } from "framer-motion";
 
