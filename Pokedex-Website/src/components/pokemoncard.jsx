@@ -188,6 +188,7 @@ export function PokemonCard(props) {
     setLengthType(data.types.length);
   };
   useEffect(() => {
+    console.log("useEffect desde pokemonCard");
     fetchData();
   }, []);
 

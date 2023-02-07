@@ -17,7 +17,7 @@ export function Pokemon(props) {
   const open = () => setmodalOpen(true);
 
   useEffect(() => {
-    console.log("hola");
+    console.log("useEffect desde Pokemon");
   }, []);
 
   return (

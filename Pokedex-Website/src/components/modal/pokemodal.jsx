@@ -24,7 +24,7 @@ export function PokeModal(props) {
 
   useEffect(() => {
     fetchData();
-    console.log(msg);
+    console.log("useEffect desde PokeModal");
     window.speechSynthesis.speak(msg);
   }, []);
 

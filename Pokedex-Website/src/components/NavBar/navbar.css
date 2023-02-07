@@ -6,9 +6,7 @@
   box-shadow: inset;
 }
 
-
-.navbar-icon{
-  background-color: black;
+.navbar-icon {
   display: flex;
   border-radius: 100%;
   width: 30%;

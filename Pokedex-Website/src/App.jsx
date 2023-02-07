@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { PokeNavBar } from "./components/NavBar/Pokenavbar";
 import { useEffect, useState } from "react";
 import Favicon from "react-favicon";
+import { Footer } from "./components/footer/footer";
 
 function App() {
   const [PokemonNumber, setPokemonNumber] = useState(0);
@@ -14,7 +15,7 @@ function App() {
     setPokemonName(data);
   }
   useEffect(() => {
-    console.log("hola");
+    console.log("UseEffect de App");
   }, []);
 
   function reproducePokemons() {
@@ -24,7 +25,7 @@ function App() {
       return <h1>Reset the values with the button "reset"</h1>;
     }
 
-    if (PokemonNumber == 0 && PokemonName == "")
+    if (PokemonNumber == "" && PokemonName == "")
       return (
         <div className="col-12 text-center">
           <h1 className="text-center">
@@ -81,10 +82,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div
-        id="PokemoncontainerText"
-        className="container d-flex flex-wrap align-items-center"
-      ></div>
+      <Footer />
     </div>
   );
 }

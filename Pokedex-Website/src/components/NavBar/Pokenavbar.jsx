@@ -22,12 +22,13 @@ export function PokeNavBar(props) {
   }
 
   function RandomPokemon() {
+    reset();
     let randomNumber = Math.floor(Math.random() * 898);
     props.getPokemonName(randomNumber.toString());
   }
 
   useEffect(() => {
-    console.log("hola");
+    console.log("UseEffect de PokeNavbar");
   }, []);
 
   return (
