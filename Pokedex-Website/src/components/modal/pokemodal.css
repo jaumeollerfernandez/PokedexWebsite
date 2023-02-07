@@ -20,16 +20,16 @@
   border: 1px solid black;
   border-radius: 10%;
 }
-.modal-image{
-min-width: 10rem;
+.modal-image {
+  min-width: 10rem;
 }
-.modal-name-title{
-    text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
+.modal-name-title {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
-.modal-description{
-    font-size: 18px;
+.modal-description {
+  font-size: 18px;
 }

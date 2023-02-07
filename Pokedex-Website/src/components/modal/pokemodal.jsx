@@ -8,26 +8,25 @@ export function PokeModal(props) {
   const PokemonName = props.name;
   const [Description, setDescription] = useState("");
   var msg = new SpeechSynthesisUtterance();
-  
+
   console.log("llega a pokemodal la url de la imagen ");
-  console.log(props.imageURL);
-  
+  console.log(props.BadgeType);
+
   const fetchData = async () => {
     const response = await fetch(
       "https://pokeapi.co/api/v2/pokemon-species/" + PokemonName + "/"
-      );
-      const data = await response.json();
-      setDescription(data.flavor_text_entries[8].flavor_text);
-      msg.text = Description;
+    );
+    const data = await response.json();
+    console.log(data);
+    setDescription(data.flavor_text_entries[8].flavor_text);
+    msg.text = Description;
   };
 
   useEffect(() => {
     fetchData();
-    console.log(msg)
+    console.log(msg);
     window.speechSynthesis.speak(msg);
-   }
-  , []);
-
+  }, []);
 
   console.log(BackgroundColor);
   const backdrop = {
@@ -55,6 +54,12 @@ export function PokeModal(props) {
                       srcset=""
                     />
                     <div className="modal-name-title">{PokemonName}</div>
+                    <img width={50} src={props.BadgeType} alt="" srcset="" />
+                    {props.BadgeType != "" ? (
+                      <img width={50} srcSet={props.BadgeType2}></img>
+                    ) : (
+                      console.log("no hay badge")
+                    )}
                   </div>
                 </div>
               </div>

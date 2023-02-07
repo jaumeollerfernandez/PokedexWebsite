@@ -17,14 +17,21 @@ export function Pokemon(props) {
   const open = () => setmodalOpen(true);
 
   useEffect(() => {
-    console.log('hola')
-   }
-  , []);
-
+    console.log("hola");
+  }, []);
 
   return (
     <>
-      {modalOpen && <PokeModal handleClose={close} color={props.color} name ={props.name} imageURL={props.image} />}
+      {modalOpen && (
+        <PokeModal
+          handleClose={close}
+          color={props.color}
+          name={props.name}
+          imageURL={props.image}
+          BadgeType={props.BadgeType}
+          BadgeType2={props.BadgeType2}
+        />
+      )}
       <motion.div
         onClick={open}
         whileHover={{ scale: 1.05 }}

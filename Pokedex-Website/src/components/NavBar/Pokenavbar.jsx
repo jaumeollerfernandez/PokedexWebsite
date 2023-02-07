@@ -21,10 +21,14 @@ export function PokeNavBar(props) {
     props.getPokemonName("");
   }
 
+  function RandomPokemon() {
+    let randomNumber = Math.floor(Math.random() * 898);
+    props.getPokemonName(randomNumber.toString());
+  }
+
   useEffect(() => {
-    console.log('hola')
-   }
-  , []);
+    console.log("hola");
+  }, []);
 
   return (
     <>
@@ -33,7 +37,12 @@ export function PokeNavBar(props) {
           <div className="col-4 pokemon-logo">
             <div className="row">
               <div className="col-2 navbar-icon justify-content-center px-4">
-                <img srcSet="./src/assets/navbar-icon.png" width={60} height={60} alt="" />
+                <img
+                  srcSet="./src/assets/navbar-icon.png"
+                  width={60}
+                  height={60}
+                  alt=""
+                />
               </div>
               <div className="col-8 ">
                 <div className="fs-1 PokeTitle">PokeData</div>
@@ -45,6 +54,9 @@ export function PokeNavBar(props) {
               <div className="col-2 SearchBar">
                 <button className="btn" onClick={reset}>
                   reset
+                </button>
+                <button className="btn btn-dark" onClick={RandomPokemon}>
+                  Random
                 </button>
               </div>
               <div className="col-10 SearchBar">

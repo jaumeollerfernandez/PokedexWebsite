@@ -14,9 +14,8 @@ function App() {
     setPokemonName(data);
   }
   useEffect(() => {
-    console.log('hola')
-   }
-  , []);
+    console.log("hola");
+  }, []);
 
   function reproducePokemons() {
     var pokemons = [];
