@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./pokemon.css";
 import { motion } from "framer-motion";
 import { PokeModal } from "./modal/pokemodal";
+import { useEffect } from "react";
 
 export function Pokemon(props) {
   const BrokenImage = (ev) => {
@@ -14,6 +15,12 @@ export function Pokemon(props) {
   const [modalOpen, setmodalOpen] = useState(false);
   const close = () => setmodalOpen(false);
   const open = () => setmodalOpen(true);
+
+  useEffect(() => {
+    console.log('hola')
+   }
+  , []);
+
 
   return (
     <>

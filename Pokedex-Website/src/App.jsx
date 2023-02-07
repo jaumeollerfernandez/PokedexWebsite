@@ -2,7 +2,7 @@ import "./App.css";
 import { PokemonCard } from "./components/pokemoncard";
 import "bootstrap/dist/css/bootstrap.css";
 import { PokeNavBar } from "./components/NavBar/Pokenavbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Favicon from "react-favicon";
 
 function App() {
@@ -13,6 +13,10 @@ function App() {
     data = data.toLowerCase();
     setPokemonName(data);
   }
+  useEffect(() => {
+    console.log('hola')
+   }
+  , []);
 
   function reproducePokemons() {
     var pokemons = [];

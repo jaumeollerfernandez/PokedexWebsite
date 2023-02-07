@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./pokemodal.css";
 
@@ -7,20 +7,27 @@ export function PokeModal(props) {
   const BackgroundColor = props.color;
   const PokemonName = props.name;
   const [Description, setDescription] = useState("");
-  console.log('llega a pokemodal la url de la imagen ')
-  console.log(props.imageURL)
-
-
+  var msg = new SpeechSynthesisUtterance();
+  
+  console.log("llega a pokemodal la url de la imagen ");
+  console.log(props.imageURL);
+  
   const fetchData = async () => {
     const response = await fetch(
       "https://pokeapi.co/api/v2/pokemon-species/" + PokemonName + "/"
-    );
-    const data = await response.json();
-    console.log(data)
-    setDescription(data.flavor_text_entries[8].flavor_text)
+      );
+      const data = await response.json();
+      setDescription(data.flavor_text_entries[8].flavor_text);
+      msg.text = Description;
   };
 
-  fetchData();
+  useEffect(() => {
+    fetchData();
+    console.log(msg)
+    window.speechSynthesis.speak(msg);
+   }
+  , []);
+
 
   console.log(BackgroundColor);
   const backdrop = {
@@ -41,7 +48,12 @@ export function PokeModal(props) {
               <div className="col-6">
                 <div className="row">
                   <div className="col">
-                    <img className="modal-image" src={props.imageURL} alt="" srcset="" />
+                    <img
+                      className="modal-image"
+                      src={props.imageURL}
+                      alt=""
+                      srcset=""
+                    />
                     <div className="modal-name-title">{PokemonName}</div>
                   </div>
                 </div>
@@ -54,7 +66,9 @@ export function PokeModal(props) {
                 </div>
               </div>
             </div>
-            <button onClick={handleClose}>Exit</button>
+            <button className="btn btn-dark m-2" onClick={handleClose}>
+              Exit
+            </button>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import "./navbar.css";
+import { useEffect } from "react";
 
 export function PokeNavBar(props) {
   function returnNumber() {
@@ -19,6 +20,11 @@ export function PokeNavBar(props) {
     props.getNumberData(0);
     props.getPokemonName("");
   }
+
+  useEffect(() => {
+    console.log('hola')
+   }
+  , []);
 
   return (
     <>
