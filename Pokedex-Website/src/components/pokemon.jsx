@@ -11,15 +11,13 @@ export function Pokemon(props) {
   const BrokenBadge = (ev) => {
     ev.target.src = "./src/assets/badges/notfound.png";
   };
-
   const [modalOpen, setmodalOpen] = useState(false);
   const close = () => setmodalOpen(false);
   const open = () => setmodalOpen(true);
-  console.log(modalOpen);
 
   return (
     <>
-      {modalOpen && <PokeModal handleClose={close}/>}
+      {modalOpen && <PokeModal handleClose={close} color={props.color} name ={props.name} imageURL={props.image} />}
       <motion.div
         onClick={open}
         whileHover={{ scale: 1.05 }}
