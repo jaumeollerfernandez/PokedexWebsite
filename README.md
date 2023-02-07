@@ -11,7 +11,7 @@ I want to add more types of Search, such as search by type, or adding a modal wh
 
 If you like the project, you can follow me to see my updates in another projects. All contributions are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
-
+ 
 Please make sure to update tests as appropriate.
 
 ## License
