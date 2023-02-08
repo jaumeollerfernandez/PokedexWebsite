@@ -7,10 +7,17 @@ export function PokeModal(props) {
   const BackgroundColor = props.color;
   const PokemonName = props.name;
   const [Description, setDescription] = useState("");
-  var msg = new SpeechSynthesisUtterance();
 
   console.log("llega a pokemodal la url de la imagen ");
   console.log(props.BadgeType);
+
+  const Speech = () => {
+    const msg = new SpeechSynthesisUtterance();
+    msg.text = Description;
+    console.log(msg.text)
+    // window.speechSynthesis.speak(msg);
+  };
+
 
   const fetchData = async () => {
     const response = await fetch(
@@ -18,14 +25,13 @@ export function PokeModal(props) {
     );
     const data = await response.json();
     console.log(data);
-    setDescription(data.flavor_text_entries[8].flavor_text);
-    msg.text = Description;
+    setDescription(data.flavor_text_entries[1].flavor_text);
   };
-
+  
   useEffect(() => {
     fetchData();
+    Speech();
     console.log("useEffect desde PokeModal");
-    window.speechSynthesis.speak(msg);
   }, []);
 
   console.log(BackgroundColor);
