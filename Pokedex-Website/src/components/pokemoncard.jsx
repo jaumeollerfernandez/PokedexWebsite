@@ -53,133 +53,133 @@ export function PokemonCard(props) {
     switch (data.types[0].type.name) {
       case "normal":
         setSelectedColor(colours.normal);
-        setBadgeType("./src/assets/badges/normal.png");
+        setBadgeType("./public/assets/badges/normal.png");
         break;
       case "fire":
         setSelectedColor(colours.fire);
-        setBadgeType("./src/assets/badges/fire.png");
+        setBadgeType("./public/assets/badges/fire.png");
         break;
       case "water":
         setSelectedColor(colours.water);
-        setBadgeType("./src/assets/badges/water.png");
+        setBadgeType("./public/assets/badges/water.png");
         break;
       case "electric":
         setSelectedColor(colours.electric);
-        setBadgeType("./src/assets/badges/electric.png");
+        setBadgeType("./public/assets/badges/electric.png");
         break;
       case "grass":
         setSelectedColor(colours.grass);
-        setBadgeType("./src/assets/badges/grass.png");
+        setBadgeType("./public/assets/badges/grass.png");
         break;
       case "ice":
         setSelectedColor(colours.ice);
-        setBadgeType("./src/assets/badges/ice.png");
+        setBadgeType("./public/assets/badges/ice.png");
         break;
       case "fighting":
         setSelectedColor(colours.fighting);
-        setBadgeType("./src/assets/badges/fight.png");
+        setBadgeType("./public/assets/badges/fight.png");
         break;
       case "poison":
         setSelectedColor(colours.poison);
-        setBadgeType("./src/assets/badges/poison.png");
+        setBadgeType("./public/assets/badges/poison.png");
         break;
       case "ground":
         setSelectedColor(colours.ground);
-        setBadgeType("./src/assets/badges/ground.png");
+        setBadgeType("./public/assets/badges/ground.png");
         break;
       case "flying":
         setSelectedColor(colours.flying);
-        setBadgeType("./src/assets/badges/flying.png");
+        setBadgeType("./public/assets/badges/flying.png");
         break;
       case "psychic":
         setSelectedColor(colours.psychic);
-        setBadgeType("./src/assets/badges/psychic.png");
+        setBadgeType("./public/assets/badges/psychic.png");
         break;
       case "bug":
         setSelectedColor(colours.bug);
-        setBadgeType("./src/assets/badges/bug.png");
+        setBadgeType("./public/assets/badges/bug.png");
         break;
       case "rock":
         setSelectedColor(colours.rock);
-        setBadgeType("./src/assets/badges/rock.png");
+        setBadgeType("./public/assets/badges/rock.png");
         break;
       case "ghost":
         setSelectedColor(colours.ghost);
-        setBadgeType("./src/assets/badges/ghost.png");
+        setBadgeType("./public/assets/badges/ghost.png");
         break;
       case "dragon":
         setSelectedColor(colours.dragon);
-        setBadgeType("./src/assets/badges/dragon.png");
+        setBadgeType("./public/assets/badges/dragon.png");
         break;
       case "dark":
         setSelectedColor(colours.dark);
-        setBadgeType("./src/assets/badges/dark.png");
+        setBadgeType("./public/assets/badges/dark.png");
         break;
       case "steel":
         setSelectedColor(colours.steel);
-        setBadgeType("./src/assets/badges/steel.png");
+        setBadgeType("./public/assets/badges/steel.png");
         break;
       case "fairy":
         setSelectedColor(colours.fairy);
-        setBadgeType("./src/assets/badges/fairy.png");
+        setBadgeType("./public/assets/badges/fairy.png");
         break;
     }
 
     if (data.types.length > 1) {
       switch (data.types[1].type.name) {
         case "normal":
-          setBadgeType2("./src/assets/badges/normal.png");
+          setBadgeType2("./public/assets/badges/normal.png");
           break;
         case "fire":
-          setBadgeType2("./src/assets/badges/fire.png");
+          setBadgeType2("./public/assets/badges/fire.png");
           break;
         case "water":
-          setBadgeType2("./src/assets/badges/water.png");
+          setBadgeType2("./public/assets/badges/water.png");
           break;
         case "electric":
-          setBadgeType2("./src/assets/badges/electric.png");
+          setBadgeType2("./public/assets/badges/electric.png");
           break;
         case "grass":
-          setBadgeType2("./src/assets/badges/grass.png");
+          setBadgeType2("./public/assets/badges/grass.png");
           break;
         case "ice":
-          setBadgeType2("./src/assets/badges/ice.png");
+          setBadgeType2("./public/assets/badges/ice.png");
           break;
         case "fighting":
-          setBadgeType2("./src/assets/badges/figh.png");
+          setBadgeType2("./public/assets/badges/figh.png");
           break;
         case "poison":
-          setBadgeType2("./src/assets/badges/poison.png");
+          setBadgeType2("./public/assets/badges/poison.png");
           break;
         case "ground":
-          setBadgeType2("./src/assets/badges/ground.png");
+          setBadgeType2("./public/assets/badges/ground.png");
           break;
         case "flying":
-          setBadgeType2("./src/assets/badges/flying.png");
+          setBadgeType2("./public/assets/badges/flying.png");
           break;
         case "psychic":
-          setBadgeType2("./src/assets/badges/psychic.png");
+          setBadgeType2("./public/assets/badges/psychic.png");
           break;
         case "bug":
-          setBadgeType2("./src/assets/badges/bug.png");
+          setBadgeType2("./public/assets/badges/bug.png");
           break;
         case "rock":
-          setBadgeType2("./src/assets/badges/rock.png");
+          setBadgeType2("./public/assets/badges/rock.png");
           break;
         case "ghost":
-          setBadgeType2("./src/assets/badges/ghost.png");
+          setBadgeType2("./public/assets/badges/ghost.png");
           break;
         case "dragon":
-          setBadgeType2("./src/assets/badges/dragon.png");
+          setBadgeType2("./public/assets/badges/dragon.png");
           break;
         case "dark":
-          setBadgeType2("./src/assets/badges/dark.png");
+          setBadgeType2("./public/assets/badges/dark.png");
           break;
         case "steel":
-          setBadgeType2("./src/assets/badges/steel.png");
+          setBadgeType2("./public/assets/badges/steel.png");
           break;
         case "fairy":
-          setBadgeType2("./src/assets/badges/fairy.png");
+          setBadgeType2("./public/assets/badges/fairy.png");
           break;
       }
     }
@@ -197,7 +197,7 @@ export function PokemonCard(props) {
       <div className="m-2 card bg-dark">
         <img
           className="card-img-top"
-          srcSet="./src/assets/loading.gif"
+          srcSet="./public/assets/loading.gif"
           alt=""
         />
       </div>
