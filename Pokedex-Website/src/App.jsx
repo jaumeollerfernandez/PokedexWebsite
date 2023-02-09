@@ -63,7 +63,7 @@ function App() {
 
   return (
     <div>
-      <Favicon href="./public/assets/favicon.ico"></Favicon>
+      <Favicon href="./assets/favicon.ico"></Favicon>
       <div className="row">
         <div className="col">
           <PokeNavBar

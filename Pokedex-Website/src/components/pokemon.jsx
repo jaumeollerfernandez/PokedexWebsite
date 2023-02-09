@@ -6,11 +6,11 @@ import { useEffect } from "react";
 
 export function Pokemon(props) {
   const BrokenImage = (ev) => {
-    ev.target.src = "./public/assets/default.png";
+    ev.target.src = "./assets/default.png";
   };
 
   const BrokenBadge = (ev) => {
-    ev.target.src = "./public/assets/badges/notfound.png";
+    ev.target.src = "./assets/badges/notfound.png";
   };
   const [modalOpen, setmodalOpen] = useState(false);
   const close = () => setmodalOpen(false);

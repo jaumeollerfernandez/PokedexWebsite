@@ -39,7 +39,7 @@ export function PokeNavBar(props) {
             <div className="row">
               <div className="col-2 navbar-icon justify-content-center px-4">
                 <img
-                  srcSet="./public/assets/navbar-icon.png"
+                  srcSet="./assets/navbar-icon.png"
                   width={60}
                   height={60}
                   alt=""
