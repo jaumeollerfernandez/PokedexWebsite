@@ -3,6 +3,8 @@
 
 This website was origined from a class exercise with learning React. It contains simple info about Pokémon. 
 
+You can see it in action in this link: https://ambitious-rock-080064903.2.azurestaticapps.net/
+
 ## Next Updates
 
 I want to add more types of Search, such as search by type, or adding a modal when you click on a Pokemon.
